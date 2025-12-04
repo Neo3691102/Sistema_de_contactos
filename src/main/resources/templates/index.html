@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Sistema de contactos</title>
@@ -50,11 +50,11 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Juan</td>
-                <td>4491234569</td>
-                <td>juan@mail.com</td>
+            <tr th:each="contacto: ${contactos}">
+                <th th:text="${contacto.idContacto}" scope="row"></th>
+                <td th:text="${contacto.nombre}"></td>
+                <td th:text="${contacto.celular}"></td>
+                <td th:text="${contacto.email}"></td>
             </tr>
 
             </tbody>
