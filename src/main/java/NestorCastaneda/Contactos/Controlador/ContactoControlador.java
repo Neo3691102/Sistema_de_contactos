@@ -26,4 +26,9 @@ public class ContactoControlador {
         modelo.put("contactos", contactos);
         return "index";//index.html
     }
+
+    @GetMapping("/agregar")
+    public String mostrarAgregar(){
+        return "agregar.html";
+    }
 }
