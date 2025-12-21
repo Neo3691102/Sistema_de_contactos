@@ -14,10 +14,10 @@
     </div>
 
     <div class="container">
-        <form>
+        <form action="/agregar" modelAttribute="contactoForma" method="post">
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre" name="nombre">
+                <input type="text" class="form-control" id="nombre" name="nombre" required="true">
 
             </div>
             <div class="mb-3">
