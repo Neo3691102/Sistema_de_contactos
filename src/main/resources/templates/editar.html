@@ -10,24 +10,24 @@
 
 <div class="container">
     <div class="container text-center" style="margin:30px">
-        <h3>Agregar contacto</h3>
+        <h3>Editar contacto</h3>
     </div>
 
     <div class="container">
-        <form action="/editar" th:object="${contacto}" method="post"> //objeto usado
+        <form action="/editar" th:object="${contacto}" method="post"> <!--objeto usado-->
             <input type="hidden" th:field="*{idContacto}" />
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
                 <input type="text" class="form-control"
                        id="nombre" name="nombre"
-                       required="true" th:field="*{nombre}">//atributo nombre del objeto contacto
+                       required="true" th:field="*{nombre}"><!--atributo nombre del objeto contacto-->
 
             </div>
             <div class="mb-3">
                 <label for="celular" class="form-label">Celular</label>
                 <input type="text"
                        class="form-control" id="celular"
-                       name="celular" th:field="*{celular}"> //atributo celular
+                       name="celular" th:field="*{celular}"> <!--atributo celular-->
             </div>
 
             <div class="mb-3">
