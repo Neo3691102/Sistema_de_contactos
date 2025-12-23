@@ -56,4 +56,12 @@ public class ContactoControlador {
         contactoServicio.guardarContacto(contacto);
         return "redirect:/";
     }
+
+    @GetMapping("/eliminar/{id}")
+    public String eliminar(@PathVariable(value = "id") int idContacto){
+        EntidadContacto contacto = new EntidadContacto();
+        contacto.setIdContacto(idContacto);
+        contactoServicio.eliminarContacto(contacto);
+        return "redirect:/";
+    }
 }
